@@ -36,10 +36,10 @@ The configuration details of each machine may be found below.
 
 | Name                | Function                   | IP Address                            | Operating System       |
 |---------------------|--------------------------  |---------------------------------------|------------------------|
-| Jump Box Provisioner| Gateway                    | 10.1.0.4/20.124.192.126               | Linux-Unbuntu LTS 18.04|
-| Web-1               |Application Server          | 10.1.0.7                              | Linux-Unbuntu LTS 18.04|
-| Web-2               | Application Server         |10.1.0.8                               | Linux-Unbuntu LTS 18.04|
-| Elk-server          | Elk Stack                  |10.2.0.4/23.100.47.133                 | Linux-Unbuntu LTS 18.0 |
+| Jump Box Provisioner| Gateway                    |10.1.0.4/20.124.192.126                | Linux-Ubuntu LTS 18.04 |
+| Web-1               |Application Server          |10.1.0.7                               | Linux-Ubuntu LTS 18.04 |
+| Web-2               | Application Server         |10.1.0.8                               | Linux-Ubuntu LTS 18.04 |
+| Elk-server          | Elk Stack                  |10.2.0.4/23.100.47.133                 | Linux-Ubuntu LTS 18.04 |
 
 
 ### Access Policies
@@ -52,16 +52,16 @@ The machines on the internal network are not exposed to the public Internet.
 Machines within the network can only be accessed by JumpBox.
 - Which machine did you allow to access your ELK VM?
 - JumpBox Provisioner
-What was its IP address?_
+What was its IP address?
 - 10.1.0.4 (Private)/20.124.192.126 (Public)  
 
 A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible| Allowed IP Addresses |
 |------------|--------------------|----------------------|
-| Jump Box   | Yes                | Home IP Address      |
+| Jump Box   | Yes                |Home IP Address       |
 |  Web-1     | No                 |10.1.0.7              |
-| Web-2      | No                 | 10.1.0.8             |
+| Web-2      | No                 |10.1.0.8              |
 | elk-stack  | No                 | Home IP Address      |
 
 ### Elk Configuration
@@ -119,6 +119,6 @@ How do I specify which machine to install the ELK server on versus which to inst
 - Two separate groups in the etc/ansible/hosts file. One of the groups will be webservers which has the IPs of the VMs that I will install Filebeat to. The other group is named elkservers which will have the IP of the VM I will install ELK to.
 
 Which URL do you navigate to in order to check that the ELK server is running?
-- http://<elk public IP>:5601/app/kibana
+- http://elk public IP:5601/app/kibana
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._

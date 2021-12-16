@@ -17,14 +17,14 @@ sudo tar czvvf logs_backup.tar.gz --listed-incremental=logs_backupfile.snar --le
 Critical Analysis Question
 Why wouldn't you use the options -x and -c at the same time with tar?
  -X is used to extract contents from an archived file and -c is used to create an archive file.  Using both commands will cancel out what you intend to do.
-================================================
+
 Step 2: Create, Manage, and Automate Cron Jobs
 Cron job for backing up the /var/log/auth.log file:
 06 * * 3 tar czvvf /home/sysadmin/Projects/auth_backup.tgz /var/log/auth.log
-=================================
+
 Step 3: Write Basic Bash Scripts
 Brace expansion command to create the four subdirectories:
-mkdir -p /backup/{freemen,diskuse,openlist,ffreedisk}
+mkdir -p /backup/{freemen,diskuse,openlist,freedisk}
 
  
 2. Paste your system.sh script edits below:
@@ -49,11 +49,9 @@ Bonus
 Command to copy system to system-wide cron directory:
 sudo cp system.sh /etc/cron.weekly/
 
- ====================================
-
 Step 4. Manage Log File Sizes
-Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file.
- Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log.
+1.Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file.
+Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log.
 Add your config file edits below:
 /var/log/auth.log {
    weekly
@@ -62,11 +60,12 @@ Add your config file edits below:
    delaycompress
    missingok
 }
-========================
+
 Bonus: Check for Policy and File Violations
 Command to verify auditd is active:
 systemctl status auditd
-     2. Command to set number of retained logs and maximum log file size:
+
+2. Command to set number of retained logs and maximum log file size:
 Add the edits made to the configuration file below:
 open /etc/audit/auditd.conf and eg make changes to max_log_file =35
 

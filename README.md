@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Network_Diagram](https://github.com/eopobee50/cyberMagic/blob/main/Diagram/Project1%20Network%20diagram.png)
+![Network_Diagram](/Diagram/Project11_Network diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
 Alternatively, select portions of the Cloud security diagram Cloud security diagram file may be used to install only certain pieces of it, such as Filebeat.

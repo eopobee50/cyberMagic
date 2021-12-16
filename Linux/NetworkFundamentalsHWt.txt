@@ -1,0 +1,60 @@
+Ernest Pobee - HW8
+Networking Fundamentals Homework: Rocking your Network!
+
+Phase 1: "I'd like to Teach the World to Ping"
+
+The fping command used is fping -g <IP Address>
+Determine the IPs for the Hollywood office and run fping against the IP ranges in order to determine which IP is accepting connections.
+
+fping -g 15.199.95.91/28
+ 
+As per above screenshot, the only IP accepting connections is 167.172.144.11/32
+Vulnerabilities - "Ping" is mostly harmless. The main security-related issues is when requests from fake source address ("spoofing"), make a target machine send relatively large packets to another host.
+Mitigation -  Disable the IP/domain from being pinged. 
+ The findings occurred on the network layer as Ping uses IP addresses and IPs are used on the Network Layer.
+=======================================
+Phase 2: "Some Syn for Nothin`"
+The command used is sudo nmap-sS 167.172.144.11/32
+
+Port 22 is open
+Vulnerabilities - Open ports become targets from hackers/cybercriminals to exploit and brute force the network and gain unauthorized access to sensitive data.
+Mitigation - Identify the open ports through scanning, understand the use of the ports and close have them closed.
+ The findings occurred on the transport layer as the transport layer is responsible for sending SYN requests to the network.
+======================================
+Phase 3: "I Feel a DNS Change Comin' On"
+ I used the ssh command to log back into IP that responded to the pings from Phase1
+ssh jimi@167.172.144.11/32
+I terminated my session with the exit command
+ 
+I run the nslookup command to determine the real domain of the IP address.
+As per the screenshot the real domain is yahoo.com 
+
+Add your findings to your summary and be sure to indicate which OSI layer they were found on.
+ The findings occurred on the Application layer which allows remote login to operate.
+
+==========================
+Phase 4: "ShARP Dressed Man"
+
+I sshed the server that was accepting connections 
+ssh jim@167.172.144.11/32
+I used cd /etc to get to the same directory as the configuration file from Phase 3 and did an ls to look into the /etc folder 
+
+ I found one of the files listed as packetcaptureinfo.txt
+
+ I  looked inside of the text file by using the cat command
+
+Analyzed the file in wireshark and found the following: 
+Using the filter http.request.method==”GET” these were the websites visited :
+
+Using the filter http.request.method == "POST", the screenshot below shows what was sent out from the website  
+
+Found a duplicate IP address with a mac address that belongs to the hacker 00:0c:29:1d:b3:b1. this is used to send spoofed ARP messages meaning all future traffic intended for the good MAC address 00:0c:29:0f:71:a3 will go to the hacker's MAC address instead. This will result in ARP poisoning attack.
+
+ 
+There are mitigation methods to protect against an ARP poisoning attack. These include:
+Creating static ARP entries, rather than dynamic ARP entries.
+Using third-party tools can identify and alert potential ARP poisoning attacks.
+  These findings occurred on the Application layer for HTTP and Data link layer for the ARP where the broadsent is sent. which allows remote login to operate.
+
+
+

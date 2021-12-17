@@ -130,33 +130,33 @@ As a **Bonus**, provide the specific commands the user will need to run to downl
  -------Filebeat---------
 
 - mkdir roles 
-  -to create a "roles" folder within the /etc/ansible folder.
+  - Create a "roles" folder within the /etc/ansible folder.
 
 - nano filebeat-config.yml 
- -correctly update the filebeat-config.yml template file using nano; updated file "filebeat-config.yml" is in Ansible folder above.
+ - Correctly update the filebeat-config.yml template file using nano; updated file "filebeat-config.yml" is in Ansible folder above.
 
 - mv filebeat-config.yml /etc/ansible/roles
- -move the filebeat-config.yml file into the "roles" folder.
+ - Move the filebeat-config.yml file into the "roles" folder.
 
 - nano filebeat-playbook.yml
- -correctly update the filebeat-playbook.yml template file using nano; updated file "filebeat-playbook.yml" is in Ansible folder above.
+ - Correctly update the filebeat-playbook.yml template file using nano; updated file "filebeat-playbook.yml" is in Ansible folder above.
 
 - ansible-playbook filebeat-playbook.yml
- -Run the filebeat playbook; ensure you are in the "etc/ansible" directory which has the "roles" folder containing the config files when running the playbook.
+ - Run the filebeat playbook; ensure you are in the "etc/ansible" directory which has the "roles" folder containing the config files when running the playbook.
 
 
 -------Metricbeat-------
 
 - nano metricbeat-config.yml 
- -correctly update the metricbeat-config.yml template file using nano; updated file "metricbeat-config.yml" is in Ansible folder above.
+ - Correctly update the metricbeat-config.yml template file using nano; updated file "metricbeat-config.yml" is in Ansible folder above.
 
 - mv metricbeat-config.yml /etc/ansible/roles
- -move the metricbeat-config.yml file into the "roles" folder created above.
+ - Move the metricbeat-config.yml file into the "roles" folder created above.
 
 - nano metricbeat-playbook.yml
- -correctly update the metricbeat-playbook.yml template file using nano; updated file "metricbeat-playbook.yml" is in Ansible folder above.
+ - Correctly update the metricbeat-playbook.yml template file using nano; updated file "metricbeat-playbook.yml" is in Ansible folder above.
 
 - ansible-playbook filebeat-playbook.yml
- -Run the metricbeat playbook; ensure you are in the "etc/ansible" directory which has the "roles" folder containing the config files when running the playbook.
+ - Run the metricbeat playbook; ensure you are in the "etc/ansible" directory which has the "roles" folder containing the config files when running the playbook.
 
 

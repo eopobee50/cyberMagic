@@ -53,9 +53,7 @@ Only the JumpBox Provisioner and ELK Stack (kibana) machine can accept connectio
 
 - My home IP Address
 
-Machines within the network can only be accessed by the JumpBox.
-
-Which machine did you allow to access your ELK VM?
+Machines within the network can only be accessed by the JumpBox. Which machine did you allow to access your ELK VM?
 
 - JumpBox Provisioner
 
@@ -75,19 +73,17 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-What is the main advantage of automating configuration with Ansible?
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because:
 - It allows for a consistent and predictable configuration
 - It is very simple to set up and use and no special coding skills are required to use Ansible's playbooks.
 - With an automated setup, the ELK stack can be created and configured very quickly and with minimal or no errors which may be result from human error from manual configuration.
 
 The playbook implements the following tasks:
-In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - SSH into the Jump-Box-Provisioner (ssh azureuser@JumpBoxpublicIP)
 - Open/Start/Attach to the ansible docker (sudo docker start frosty_newton)/(sudo docker attach frosty_newton)
-- Open /etc/ansible/roles directory and created the ELK playbook (Elk_Playbook.yml)
-- Ran the Elk_Playbook.yml in that same directory (ansible-playbook Elk_Playbook.yml)
-- Lastly, I SSH into the ELK-VM (ssh azureuser@elkserverprivateIP) to verify the server is up and running.
+- Open /etc/ansible/roles directory and created the ELK playbook (elk_Playbook.yml)
+- Run the Elk_Playbook.yml in that same directory (ansible-playbook elk_Playbook.yml)
+- SSH into the ELK-VM (ssh azureuser@elkserverprivateIP) to verify the server is up and running.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
  
@@ -112,8 +108,6 @@ Filebeat/Metricbeat
 - Copy the filebeat-configuration.yml/metricbeat-configuration.yml file to /etc/ansible/roles/.
 - Update the filebeat-configuration.yml/metricbeat  configuration files to include the ELK private IP .
 - Run the playbook, and navigate to ELK VM Public IP (http://<elk public IP>:5601/app/kibana) to check that the installation worked as expected.
-
-Answer the following questions to fill in the blanks:
 
 Which file is the playbook? 
 - filebeat-playbook.yml

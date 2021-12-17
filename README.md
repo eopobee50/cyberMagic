@@ -64,12 +64,12 @@ What was its IP address?
 
 A summary of the access policies in place can be found in the table below.
 
-| Name       | Publicly Accessible| Allowed IP Addresses |
-|------------|--------------------|----------------------|
-| Jump Box   | Yes                |Home IP Address       |
-|  Web-1     | No                 |10.1.0.7              |
-| Web-2      | No                 |10.1.0.8              |
-| elk-stack  | No                 | Home IP Address      |
+| Name       | Publicly Accessible| Allowed IP Addresses         |
+|------------|--------------------|------------------------------|
+| Jump Box   | Yes                |Home IP Address               |
+| Web-1      | No                 |10.1.0.4/10.2.0.4             |
+| Web-2      | No                 |10.1.0.4/10.2.0.4             |
+| Elk-stack  | Yes                |Home IP Address/10.1.0.4      |
 
 ### Elk Configuration
 

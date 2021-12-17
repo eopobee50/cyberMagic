@@ -42,7 +42,7 @@ The configuration details of each machine may be found below.
 | Jump Box Provisioner| Gateway                    |10.1.0.4/20.124.192.126                | Linux-Ubuntu LTS 18.04 |
 | Web-1               |Application Server          |10.1.0.7                               | Linux-Ubuntu LTS 18.04 |
 | Web-2               | Application Server         |10.1.0.8                               | Linux-Ubuntu LTS 18.04 |
-| Elk-server          | Elk Stack                  |10.2.0.4/23.100.47.133                 | Linux-Ubuntu LTS 18.04 |
+| Elk-server          | Elk Stack/Monitoring       |10.2.0.4/23.100.47.133                 | Linux-Ubuntu LTS 18.04 |
 
 
 ### Access Policies

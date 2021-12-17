@@ -49,14 +49,20 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-- Only the JumpBox Provisioner and ELK Stack (kibana) machine can accept connections from the Internet. 
-- Access to this machine is only allowed from the following IP addresses:
+Only the JumpBox Provisioner and ELK Stack (kibana) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
 - My home IP Address
-Machines within the network can only be accessed by JumpBox.
-- Which machine did you allow to access your ELK VM?
+
+Machines within the network can only be accessed by the JumpBox.
+
+Which machine did you allow to access your ELK VM?
+
 - JumpBox Provisioner
+
 What was its IP address?
+
 - 10.1.0.4 (Private)/20.124.192.126 (Public)  
+
 
 A summary of the access policies in place can be found in the table below.
 

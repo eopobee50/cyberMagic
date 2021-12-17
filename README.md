@@ -130,7 +130,7 @@ As a **Bonus**, provide the specific commands the user will need to run to downl
  -------Filebeat---------
 
 - mkdir roles 
- -to create a "roles" folder within the /etc/ansible folder.
+  -to create a "roles" folder within the /etc/ansible folder.
 
 - nano filebeat-config.yml 
  -correctly update the filebeat-config.yml template file using nano; updated file "filebeat-config.yml" is in Ansible folder above.

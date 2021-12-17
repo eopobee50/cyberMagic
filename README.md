@@ -8,6 +8,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 Alternatively, select portions of the Network diagram may be used to install only certain pieces of it, such as Filebeat.
 
 Filebeat-playbook.yml
+
 Filebeat-configuration.yml
 
 This document contains the following details:
@@ -118,7 +119,8 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 - /etc/ansible/hosts file (IP of the Virtual Machines).
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-- Two separate groups in the etc/ansible/hosts file. One of the groups will be webservers which has the IPs of the VMs that I will install Filebeat to. The other group is named elkservers which will have the IP of the VM I will install ELK to.
+- There are two separate sections within the etc/ansible/hosts file that needs to be updated. The first section to be updated is the webservers which should have the IP adddresses of the web VMs where Filebeat needs to be installed. 
+The other section is the elkservers portion which should display the IP address of the ELK VM where ELK will be installed.
 
 Which URL do you navigate to in order to check that the ELK server is running?
 - http://elk public IP:5601/app/kibana

@@ -34,3 +34,6 @@
 
     # Use systemd module
   - name: enable service metricbeat on boot
+    systemd:
+      name: metricbeat
+      enabled: yes

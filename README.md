@@ -84,10 +84,10 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - With an automated setup, the ELK stack can be created and configured very quickly and with minimal or no errors which may be result from human error from manual configuration.
 
 The playbook implements the following tasks:
-- SSH into the Jump-Box-Provisioner (ssh azureuser@JumpBoxpublicIP)
-- Open/Start/Attach to the ansible docker (sudo docker start frosty_newton)/(sudo docker attach frosty_newton)
-- Open /etc/ansible/roles directory and created the ELK playbook (elk_Playbook.yml)
-- Run the Elk_Playbook.yml in that same directory (ansible-playbook elk_Playbook.yml)
+- SSH into the Jump-Box-Provisioner (ssh azureuser@JumpBoxpublicIP).
+- Open/Start/Attach to the ansible docker (sudo docker start frosty_newton)/(sudo docker attach frosty_newton).
+- Open /etc/ansible/roles directory and created the ELK playbook (elk_Playbook.yml).
+- Run the Elk_Playbook.yml in that same directory (ansible-playbook elk_Playbook.yml).
 - SSH into the ELK-VM (ssh azureuser@elkserverprivateIP) to verify the server is up and running.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.

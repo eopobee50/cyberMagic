@@ -24,14 +24,19 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly functional, in addition to restricting high traffic to the network.
 
 What aspect of security do load balancers protect? 
-- A load balancer helps prevent network traffic overload and distributes network or application traffic across a number of servers to optimize productivity and maximize uptime- The off-loading function of a load balancer helps protect organizations against distributed denial-of-service (DDoS) attacks. This is done by redirecting network traffic from one server to another server for example a cloud provider.
+- A load balancer helps prevent network traffic overload and distributes network or application traffic across a number of servers to optimize productivity and maximize uptime.
+
+- The off-loading function of a load balancer helps protect organizations against distributed denial-of-service (DDoS) attacks. This is done by redirecting network traffic from one server to another server.
+
 What is the advantage of a jump box?
 - A jump box serves as a secure computer that is connected to before launching any administrative task or used as an origination point to connect to other servers or untrusted environments.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
+
 What does Filebeat watch for?
 - Filebeat is installed as an agent on servers and monitors the log files or locations specified, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
-What does Metricbeat record?_
+
+What does Metricbeat record?
 - Metricbeat helps in the monitoring of servers by recording metrics and statistics and transports them to the output that is specified  such as Elasticsearch or Logstash. 
 
 The configuration details of each machine may be found below.

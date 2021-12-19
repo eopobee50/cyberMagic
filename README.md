@@ -34,7 +34,7 @@ What is the advantage of a jump box?
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
 
 What does Filebeat watch for?
-- Filebeat is installed as an agent on servers and monitors the log files or locations specified, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- Filebeat is installed as an agent on servers and monitors the log files or locations specified, collects log events, and forwards them to either Elasticsearch or Logstash for indexing.
 
 What does Metricbeat record?
 - Metricbeat helps in the monitoring of servers by recording metrics and statistics and transports them to the output that is specified  such as Elasticsearch or Logstash. 
@@ -56,7 +56,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the JumpBox Provisioner and ELK Stack (kibana) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-- My home IP Address
+- 72.39.93.201 (LocalHost Public IP Address).
 
 Machines within the network can only be accessed by the JumpBox. Which machine did you allow to access your ELK VM?
 

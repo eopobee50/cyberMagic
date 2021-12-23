@@ -79,9 +79,9 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because:
-- It allows for a consistent and predictable configuration
+- It allows for a consistent and predictable configuration.
 - It is very simple to set up and use and no special coding skills are required to use Ansible's playbooks.
-- With an automated setup, the ELK stack can be created and configured very quickly and with minimal or no errors which may be result from human error from manual configuration.
+- It can be created and configured very quickly and with minimal or no errors which may be result from human error from manual configuration.
 
 The playbook implements the following tasks:
 - SSH into the Jump-Box-Provisioner (ssh azureuser@JumpBoxpublicIP).
@@ -113,7 +113,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 Filebeat/Metricbeat
 - Copy the filebeat-configuration.yml/metricbeat-configuration.yml file to /etc/ansible/roles/.
-- Update the filebeat-configuration.yml/metricbeat  configuration files to include the ELK private IP .
+- Update the filebeat-configuration.yml/metricbeat configuration files to include the ELK private IP.
 - Run the playbook, and navigate to ELK VM Public IP (http://<elk public IP>:5601/app/kibana) to check that the installation worked as expected.
 
 Which file is the playbook? 
